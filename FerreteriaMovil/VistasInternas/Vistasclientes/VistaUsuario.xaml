@@ -4,70 +4,91 @@
              x:Class="FerreteriaMovil.VistasInternas.Vistasclientes.VistaUsuario"
              BackgroundColor="Wheat"
              Title="VistaUsuario">
-    <ScrollView>
-        <VerticalStackLayout Padding="30">
-            <Label 
-                Text="DATOS PERSONALES"
-                TextColor="Black"
-                FontSize="Medium"     
-                FontAttributes="Bold"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Nombres y Apellidos"/>
-            <Entry
-                BackgroundColor="White"
-                IsReadOnly="True"/>
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Cedula"/>
-            <Entry
-                BackgroundColor="White"
-                IsReadOnly="True"/>
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Fecha de nacimiento"/>
-            <DatePicker
-                BackgroundColor="White"
-                TextColor="Black"
-                HorizontalOptions="Center"/>
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Telefono"/>
-            <Entry
-                BackgroundColor="White"
-                IsReadOnly="True"/>
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Correo"/>
-            <Entry
-                BackgroundColor="White"
-                IsReadOnly="True"/>
-            <Label
-                Padding="15"
-                HorizontalOptions="Center"
-                FontSize="Medium"
-                TextColor="Black"
-                Text="Password"/>
-            <Entry
-                BackgroundColor="White"
-                IsReadOnly="True"/>
-        </VerticalStackLayout>
-    </ScrollView>
+
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="0">
+                <Label 
+            Text="DATOS PERSONALES"
+            TextColor="Black"
+            FontSize="Medium"     
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Nombres y Apellidos"/>
+                <Entry
+            BackgroundColor="White"
+            IsReadOnly="True"
+                    IsEnabled="False"/>
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Cedula"/>
+                <Entry
+            BackgroundColor="White"
+            IsReadOnly="True"
+                    IsEnabled="False"/>
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Fecha de nacimiento"/>
+                <DatePicker
+            BackgroundColor="White"
+            TextColor="Black"
+            HorizontalOptions="Center"
+                    IsEnabled="False"/>
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Telefono"/>
+                <Entry
+            BackgroundColor="White"
+            IsReadOnly="True"
+                    IsEnabled="False"/>
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Correo"/>
+                <Entry
+            BackgroundColor="White"
+            IsReadOnly="True"
+                    IsEnabled="False"/>
+                <Label
+            Padding="15"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            TextColor="Black"
+            Text="Password"/>
+                <Entry
+            BackgroundColor="White"
+            IsReadOnly="True"
+                    IsEnabled="False"/>
+            </VerticalStackLayout>
+        </ScrollView>
+        <!-- Barra de navegación inferior -->
+        <StackLayout Orientation="Horizontal"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="End"
+              BackgroundColor="#e5d599"
+              HeightRequest="60"
+              Padding="5">
+            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </Grid>
 </ContentPage>
