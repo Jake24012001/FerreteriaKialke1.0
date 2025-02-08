@@ -36,10 +36,11 @@
                      HorizontalOptions="FillAndExpand"
                      VerticalOptions="End"
                      BackgroundColor="Orange"
-                     Padding="10">
-            <ImageButton Source="Home" HorizontalOptions="StartAndExpand" />
-            <ImageButton Source="Perfil" HorizontalOptions="CenterAndExpand" />
-            <ImageButton Source=".png" HorizontalOptions="CenterAndExpand" />
+                     HeightRequest="70"
+                     Padding="5">
+            <ImageButton Source="" HorizontalOptions="StartAndExpand" />
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" />
             <ImageButton Source="archivarfactura.png" HorizontalOptions="EndAndExpand" />
         </StackLayout>
     </Grid>
