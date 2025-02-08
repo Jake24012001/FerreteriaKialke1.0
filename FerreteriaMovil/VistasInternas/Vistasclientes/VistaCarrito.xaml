@@ -35,13 +35,13 @@
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="FillAndExpand"
                      VerticalOptions="End"
-                     BackgroundColor="Orange"
-                     HeightRequest="70"
+                     BackgroundColor="#e5d599"
+                     HeightRequest="60"
                      Padding="5">
-            <ImageButton Source="" HorizontalOptions="StartAndExpand" />
-            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" />
-            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" />
-            <ImageButton Source="archivarfactura.png" HorizontalOptions="EndAndExpand" />
+            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_1"/>
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_2"/>
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked"/>
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_3"/>
         </StackLayout>
     </Grid>
 </ContentPage>
