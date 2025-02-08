@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PresentacioFerreteria
+namespace FerreteriaAdmin
 {
     public partial class frmEditCategoria : Form
     {
         public frmEditCategoria()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

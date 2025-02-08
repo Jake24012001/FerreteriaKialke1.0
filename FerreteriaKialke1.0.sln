@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaMovil", "FerreteriaMovil\FerreteriaMovil.csproj", "{8E704E68-7B50-44A2-A298-6C6419209006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaMovil", "FerreteriaMovil\FerreteriaMovil.csproj", "{8E704E68-7B50-44A2-A298-6C6419209006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaKialkeAPI", "FerreteriaKialkeAPI\FerreteriaKialkeAPI.csproj", "{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaKialkeAPI", "FerreteriaKialkeAPI\FerreteriaKialkeAPI.csproj", "{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntida
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{53C59288-20A2-4A74-BC50-02CBA6FAC019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacioFerreteria", "PresentacioFerreteria\PresentacioFerreteria.csproj", "{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaAdmin", "PresentacioFerreteria\FerreteriaAdmin.csproj", "{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,5 +49,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A1A6B87-33CA-4026-9D66-492428CF9883}
 	EndGlobalSection
 EndGlobal
