@@ -39,8 +39,8 @@
                      Padding="10">
             <ImageButton Source="Home" HorizontalOptions="StartAndExpand" />
             <ImageButton Source="Perfil" HorizontalOptions="CenterAndExpand" />
-            <ImageButton Source="iconocarrito.png" HorizontalOptions="CenterAndExpand" />
-            <ImageButton Source="Ajustes" HorizontalOptions="EndAndExpand" />
+            <ImageButton Source=".png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="EndAndExpand" />
         </StackLayout>
     </Grid>
 </ContentPage>
