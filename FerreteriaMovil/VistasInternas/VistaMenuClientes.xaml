@@ -12,7 +12,7 @@
                         <Frame BackgroundColor="White" BorderColor="LightGray" CornerRadius="10" Padding="4" Margin="10">
                             <VerticalStackLayout Spacing="5">
                                 <Label
-                            Text="PRODUTO DISPONIBLES"
+                            Text="PRODUTO DISPONIBLE"
                             FontSize="Subtitle"
                             FontAttributes="Bold"
                             TextColor="Black"
