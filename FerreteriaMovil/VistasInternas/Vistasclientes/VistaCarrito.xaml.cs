@@ -28,4 +28,12 @@ public partial class VistaCarrito : ContentPage
     {
         await Navigation.PushAsync(new VistaFactura());
     }
+
+    //codigo que permite bloquear la opcion de retroceder
+    protected override bool OnBackButtonPressed()
+    {
+        // No permitir navegar hacia atrás
+        return true;
+
+    }
 }

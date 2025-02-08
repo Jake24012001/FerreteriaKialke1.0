@@ -45,5 +45,14 @@ namespace FerreteriaMovil.VistasInternas
                 await DisplayAlert("Atención", "Credenciales de administrador incorrectas.", "OK");
             }
         }
+        
+        //codigo que permite bloquear la opcion de retroceder
+    protected override bool OnBackButtonPressed()
+        {
+            // No permitir navegar hacia atrás
+            return true;
+
+        }
     }
+    
 }
