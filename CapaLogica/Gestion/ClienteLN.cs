@@ -15,7 +15,7 @@ namespace CapaLogica.Gestion
             List<Cliente> lista = null;
             try
             {
-
+                Console.WriteLine("Valio Todo");  
             }
             catch (Exception error)
             {
