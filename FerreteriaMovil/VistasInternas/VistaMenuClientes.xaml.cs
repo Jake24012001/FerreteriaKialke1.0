@@ -2,6 +2,7 @@ namespace FerreteriaMovil.VistasInternas;
 
 public partial class VistaMenuClientes : ContentPage
 {
+
     public VistaMenuClientes()
     {
         InitializeComponent();
