@@ -1,0 +1,6 @@
+@FerreteriaAPI_HostAddress = http://localhost:5052
+
+GET {{FerreteriaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

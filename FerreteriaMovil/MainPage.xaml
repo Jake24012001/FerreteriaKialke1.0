@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaMovil.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            TranslationY="100"
+            Spacing="25">
+            <Image
+                Source="portada.png"
+                HeightRequest="185"
+                Aspect="Fill"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="FERRETERIA KIALKE"
+                TextColor="Black"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Cuidamos la economia de tu bolsillo"
+                TextColor="Black"
+                FontSize="Default"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                />
+
+            <Button
+                x:Name="BotonIngresar"
+                Text="Bienvenidos" 
+                TextColor="White"
+                FontSize="Medium"
+                BackgroundColor="#E32551"
+                Clicked="BotonIngresar_Clicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaMovil.VistasInternas.Vistasclientes.VistaCarrito"
+             Title="Vista Carrito"
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout>
+            <Label
+                Padding="10"
+                Text="Productos Seleccionados"
+                TextColor="Black"
+                FontSize="Title"
+                HorizontalTextAlignment="Center" />
+            <Image x:Name="misfotos"
+                   Source="iconoapi.png"
+                   WidthRequest="100"
+                   HeightRequest="100"
+                   BackgroundColor="Transparent"/>
+            <CollectionView ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" ColumnDefinitions="*, *">
+                            <Label Text="{Binding Name}" Grid.Column="0"/>
+                            <Label Text="{Binding Price}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

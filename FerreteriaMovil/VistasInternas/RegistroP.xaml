@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaMovil.VistasInternas.RegistroP"
+             BackgroundColor="#E32551">
+    <VerticalStackLayout Padding="25" Spacing="30"  >
+        <Label 
+        Text="Menu Registro"
+        FontSize="Title"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+        <Grid RowSpacing="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+            <Label Text="Cedula" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+            <Entry Grid.Row="0" Grid.Column="1" BackgroundColor="White" x:Name="cedu" TextColor="Black"/>
+
+            <Label Text="Nombres" FontSize="Medium"  Grid.Row="1" Grid.Column="0"/>
+            <Entry Grid.Row="1" Grid.Column="1" BackgroundColor="White" x:Name="nomb" TextColor="Black"/>
+
+            <Label Text="Apellidos" FontSize="Medium"  Grid.Row="2" Grid.Column="0"/>
+            <Entry Grid.Row="2" Grid.Column="1" BackgroundColor="White" x:Name="ape" TextColor="Black"/>
+
+            <Label Text="Fecha Nacimiento" FontSize="Medium"  Grid.Row="3" Grid.Column="0"/>
+            <DatePicker Grid.Row="3" Grid.Column="1" BackgroundColor="White"
+                        TextColor="Black" x:Name="fech"/>
+
+            <Label Text="Telefono" FontSize="Medium"  Grid.Row="4" Grid.Column="0"/>
+            <Entry Grid.Row="4" Grid.Column="1" BackgroundColor="White"
+                   x:Name="tele" TextColor="Black"/>
+            
+            <Label Text="Correo" FontSize="Medium"  Grid.Row="5" Grid.Column="0"/>
+            <Entry Grid.Row="5" Grid.Column="1" BackgroundColor="White" x:Name="corre" TextColor="Black"/>
+
+            <Label Text="Contraseña" FontSize="Medium"  Grid.Row="6" Grid.Column="0"/>
+            <Entry Grid.Row="6" Grid.Column="1" BackgroundColor="White" x:Name="corra" TextColor="Black" IsPassword="False"/>
+
+            <Button Text="Guardar" Grid.Row="8" HorizontalOptions="Center" Clicked="Guardar_Clicked"/>
+            <Button Text="Cancelar" Grid.Row="8" Grid.Column="1" HorizontalOptions="Center" Clicked="Cancelar_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

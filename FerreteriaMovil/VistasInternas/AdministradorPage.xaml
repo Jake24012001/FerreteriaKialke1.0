@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaMovil.VistasInternas.AdministradorPage"
+             Title="Administración Kialke"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Título -->
+            <Label 
+                Text="Panel de Administración"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                TextColor="#029DAF"/>
+
+            <!-- Gestión de Usuarios -->
+            <Frame BackgroundColor="#029DAF" BorderColor="LightGray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image 
+                        Source="personas.png"
+                        Aspect="AspectFit"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"/>
+                    <Button 
+                        Text="Gestión de Usuarios"
+                        TextColor="White"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Clicked="MenuUsuarios"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Gestión de Productos -->
+            <Frame BackgroundColor="#029DAF" BorderColor="LightGray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image 
+                        Source="productos.png"
+                        Aspect="AspectFit"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"/>
+                    <Button 
+                        Text="Gestión de Productos"
+                        TextColor="White"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Clicked="MenuProductos"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Gestión de Proveedores -->
+            <Frame BackgroundColor="#029DAF" BorderColor="LightGray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Image 
+                        Source="proveedor.png"
+                        Aspect="AspectFit"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"/>
+                    <Button 
+                        Text="Gestión de Proveedores"
+                        TextColor="White"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Clicked="MenuProveedores"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Otras Funcionalidades -->
+            <Frame BackgroundColor="#029DAF" BorderColor="LightGray" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="10">
+                    <Button 
+                        Text="Otras Funcionalidades"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        BackgroundColor="#029DAF"
+                        Clicked="MenuOtras"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

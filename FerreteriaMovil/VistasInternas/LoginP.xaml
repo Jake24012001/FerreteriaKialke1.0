@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FerreteriaMovil.VistasInternas.LoginP"
+             BackgroundColor="#029DAF">
+    <Grid Padding="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Spacing="30" Grid.Row="0">
+            <Label Text="Menu Login"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="USUARIO O CORREO ELECTRONICO"
+                   FontAttributes="Bold" />
+            <Entry x:Name="CorreoU"
+                   TextColor="Black"
+                   BackgroundColor="White" />
+
+            <Label Text="CONTRASEÑA"
+                   FontAttributes="Bold" />
+            <Entry x:Name="ContraU"
+                   TextColor="Black"
+                   IsPassword="True"
+                   BackgroundColor="White" />
+
+            <Button Text="INGRESAR"
+                    Background="#E32551"
+                    CornerRadius="15"
+                    Clicked="Ingresar_Clicked" />
+            <Button Text="REGISTRAR"
+                    Background="#E32551"
+                    CornerRadius="15"
+                    Clicked="Registro_Clicked" />
+        </VerticalStackLayout>
+
+        <Button Text="ADMINISTRADOR"
+                Background="#E32551"
+                CornerRadius="15"
+                Clicked="Administrador_Clicked"
+                Grid.Row="1"
+                VerticalOptions="End"
+                HorizontalOptions="Fill" />
+    </Grid>
+</ContentPage>
