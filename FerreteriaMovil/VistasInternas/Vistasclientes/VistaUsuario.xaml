@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FerreteriaMovil.VistasInternas.Vistasclientes.VistaUsuario"
-             BackgroundColor="Wheat"
+             BackgroundColor="#029DAF"
              Title="VistaUsuario">
 
     <Grid>
         <ScrollView>
-            <VerticalStackLayout Padding="0">
+            <VerticalStackLayout Padding="30">
                 <Label 
             Text="DATOS PERSONALES"
             TextColor="Black"

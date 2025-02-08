@@ -9,7 +9,7 @@
             <CollectionView x:Name="ProductosCollectionView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="White" BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="15">
+                        <Frame BackgroundColor="White" BorderColor="LightGray" CornerRadius="10" Padding="4" Margin="10">
                             <VerticalStackLayout Spacing="5">
                                 <Label
                             Text="PRODUTO DISPONIBLE"
