@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FerreteriaKialke.CapaEntidades.Gestion
+namespace CapaEntidades.Gestion
 {
     public class Cliente {
 
@@ -44,12 +44,12 @@ namespace FerreteriaKialke.CapaEntidades.Gestion
             Telefono = telefono;
         }
 
+        public int IdCliente { get => idCliente; set => idCliente = value; }
         public int IdCuenta { get => idCuenta; set => idCuenta = value; }
         public string Cedula { get => cedula; set => cedula = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public string Telefono { get => telefono; set => telefono = value; }
-        public int IdCliente { get => idCliente; set => idCliente = value; }
     }
 }

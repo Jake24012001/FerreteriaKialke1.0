@@ -4,27 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FerreteriaKialke.CapaEntidades.Gestion
+namespace CapaEntidades.Gestion
 {
     public class Cuenta
     {
-        public int Id_Cuenta { get; set; }
-        public int Id_rol { get; set;}
-        public string Mail { get; set; }
-        public string Password { get; set; }
+        private int idCuenta;
+        private int idrol;
+        private string mail;
+        private string password;
+
+        
 
         public Cuenta()
         {
 
         }
 
-        public Cuenta(string mail, string password)
+        public Cuenta(int idRol ,string mail, string password)
         {
+            Id_rol = idRol;
             Mail = mail;
             Password = password;
-            Id_rol = 1;
         }
 
-        
+        public int Id_Cuenta { get => idCuenta; set => idCuenta = value; }
+        public int Id_rol { get => idrol; set => idrol = value; }
+        public string Mail { get => mail; set => mail = value; }
+        public string Password { get => password; set => password = value; }
     }
 }

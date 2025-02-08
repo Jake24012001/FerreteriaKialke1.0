@@ -1,22 +1,17 @@
-﻿using EntidadCliente = FerreteriaKialke.CapaEntidades.Gestion.Cliente;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using EntidadCliente = CapaEntidades.Gestion.Cliente;
 
 namespace CapaDatos.Gestion
 {
     public class ClienteCD
     {
-        
-        public static void CORAZONDEMELON(){
-            
-            }
         public static List<CP_ListarClientesResult> listarClientesCD()
-        {  
+        {
             ConexionDataContext conectorBD = null;   //declaramos
             List<CP_ListarClientesResult> lista = null;
             try
@@ -44,7 +39,7 @@ namespace CapaDatos.Gestion
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.Message);
+                Console.WriteLine("Error al filtrar ClientesCD" + error.Message);
             }
             return lista;
         }
@@ -60,7 +55,7 @@ namespace CapaDatos.Gestion
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.Message);
+                Console.WriteLine("Error al insertar ClientesCD" + error.Message);
             }
         }
 
@@ -75,7 +70,7 @@ namespace CapaDatos.Gestion
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.Message);
+                Console.WriteLine("Error al modificar ClientesCD" + error.Message);
             }
         }
 
@@ -90,7 +85,7 @@ namespace CapaDatos.Gestion
             }
             catch (Exception error)
             {
-                Console.WriteLine(error.Message);
+                Console.WriteLine("Error al eliminar ClientesCD" + error.Message);
             }
         }
     }
