@@ -7,10 +7,67 @@
     <ScrollView>
         <VerticalStackLayout Padding="30">
             <Label 
-        Text="DATOS PERSONALES"
-        FontSize="Medium"                
-        VerticalOptions="Center" 
-        HorizontalOptions="Center" />
+                Text="DATOS PERSONALES"
+                TextColor="Black"
+                FontSize="Medium"     
+                FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Nombres y Apellidos"/>
+            <Entry
+                BackgroundColor="White"
+                IsReadOnly="True"/>
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Cedula"/>
+            <Entry
+                BackgroundColor="White"
+                IsReadOnly="True"/>
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Fecha de nacimiento"/>
+            <DatePicker
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Telefono"/>
+            <Entry
+                BackgroundColor="White"
+                IsReadOnly="True"/>
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Correo"/>
+            <Entry
+                BackgroundColor="White"
+                IsReadOnly="True"/>
+            <Label
+                Padding="15"
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                TextColor="Black"
+                Text="Password"/>
+            <Entry
+                BackgroundColor="White"
+                IsReadOnly="True"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
