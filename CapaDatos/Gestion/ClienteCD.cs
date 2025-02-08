@@ -11,6 +11,9 @@ namespace CapaDatos.Gestion
 {
     public class ClienteCD
     {
+        public static void CORAZONDEMELON(){
+            
+            }
         public static List<CP_ListarClientesResult> listarClientesCD()
         {  
             ConexionDataContext conectorBD = null;   //declaramos
