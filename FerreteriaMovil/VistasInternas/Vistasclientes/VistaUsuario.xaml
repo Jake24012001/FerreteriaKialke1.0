@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FerreteriaMovil.VistasInternas.Vistasclientes.VistaUsuario"
+             BackgroundColor="Wheat"
              Title="VistaUsuario">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="30">
+            <Label 
+        Text="DATOS PERSONALES"
+        FontSize="Medium"                
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
