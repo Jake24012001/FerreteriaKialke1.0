@@ -16,16 +16,16 @@ public partial class VistaCarrito : ContentPage
 
     private async void UsarioVista_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new VistaCarrito());
+       // await Navigation.PushAsync(new VistaCarrito());
     }
 
     private async void CategoriaVista_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new VistaCarrito());
+       // await Navigation.PushAsync(new ViewCategoria());
     }
 
     private async void FacturaVista_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new VistaCarrito());
+        //await Navigation.PushAsync(new VistaCarrito());
     }
 }

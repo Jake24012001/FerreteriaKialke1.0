@@ -100,10 +100,16 @@
 	  <MauiXaml Update="VistasInternas\VistaMenuClientes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="VistasInternas\Vistasclientes\ViewCategoria.xaml">
+	  <MauiXaml Update="VistasInternas\Vistasclientes\VistaCarrito.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="VistasInternas\Vistasclientes\VistaCarrito.xaml">
+	  <MauiXaml Update="VistasInternas\Vistasclientes\VistaCategoria.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VistasInternas\Vistasclientes\VistaFactura.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VistasInternas\Vistasclientes\VistaUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

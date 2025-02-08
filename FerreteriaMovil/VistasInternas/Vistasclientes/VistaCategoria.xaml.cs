@@ -1,8 +1,8 @@
 namespace FerreteriaMovil.VistasInternas.Vistasclientes;
 
-public partial class ViewCategoria : ContentPage
+public partial class VistaCategoria : ContentPage
 {
-	public ViewCategoria()
+	public VistaCategoria()
 	{
 		InitializeComponent();
 	}
