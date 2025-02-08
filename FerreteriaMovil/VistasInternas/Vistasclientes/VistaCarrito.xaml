@@ -4,29 +4,43 @@
              x:Class="FerreteriaMovil.VistasInternas.Vistasclientes.VistaCarrito"
              Title="Vista Carrito"
              BackgroundColor="White">
-    <ScrollView>
-        <StackLayout>
-            <Label
-                Padding="10"
-                Text="Productos Seleccionados"
-                FontAttributes="Bold"
-                TextColor="Black"
-                FontSize="Title"
-                HorizontalTextAlignment="Center" />
-            <Image x:Name="misfotos"
-                   Source="iconocarrito.png"
-                   WidthRequest="100"
-                   HeightRequest="100"/>
-            <CollectionView ItemsSource="{Binding Items}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10" ColumnDefinitions="*, *">
-                            <Label Text="{Binding Name}" Grid.Column="0"/>
-                            <Label Text="{Binding Price}" Grid.Column="1" />
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Label
+                    Padding="10"
+                    Text="Productos Seleccionados"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    FontSize="Title"
+                    HorizontalTextAlignment="Center" />
+                <Image x:Name="misfotos"
+                       Source="iconocarrito.png"
+                       WidthRequest="100"
+                       HeightRequest="100"/>
+                <CollectionView ItemsSource="{Binding Items}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" ColumnDefinitions="*, *">
+                                <Label Text="{Binding Name}" Grid.Column="0"/>
+                                <Label Text="{Binding Price}" Grid.Column="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End"
+                     BackgroundColor="Orange"
+                     Padding="10">
+            <ImageButton Source="Home" HorizontalOptions="StartAndExpand" />
+            <ImageButton Source="Perfil" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="iconocarrito.png" HorizontalOptions="CenterAndExpand" />
+            <ImageButton Source="Ajustes" HorizontalOptions="EndAndExpand" />
         </StackLayout>
-    </ScrollView>
+    </Grid>
 </ContentPage>
