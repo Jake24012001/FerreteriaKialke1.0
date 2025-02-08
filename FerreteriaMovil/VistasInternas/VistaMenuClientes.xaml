@@ -21,7 +21,7 @@
                             <Label Text="{Binding Nombre}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
                             <Label Text="{Binding Descripcion}" TextColor="Black" HorizontalOptions="Center"/>
                             <Label Text="{Binding Precio}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
-                            <Button Text="Agregar al Carrito" FontSize="Medium" Clicked="Button_Clicked"/>
+                            <Button Text="Agregar al Carrito" FontSize="Medium" Clicked="AgregarCarritoButton"/>
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>

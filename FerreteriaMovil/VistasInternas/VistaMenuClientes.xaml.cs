@@ -27,7 +27,7 @@ public partial class VistaMenuClientes : ContentPage
 
     }
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    private async  void AgregarCarritoButton(object sender, EventArgs e)
     {
         bool answer = await DisplayAlert("Alerta", "¿Desea agregar el producto al carrito?", "Sí", "No");
         if (answer)
@@ -51,6 +51,5 @@ public partial class VistaMenuClientes : ContentPage
             // Aquí puedes agregar el código para manejar la respuesta negativa
             await DisplayAlert("", "Suerte la proxima vez", "OK");
         }
-
     }
 }

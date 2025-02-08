@@ -13,7 +13,7 @@
                 FontSize="Title"
                 HorizontalTextAlignment="Center" />
             <Image x:Name="misfotos"
-                   Source="iconoapi.png"
+                   Source="iconocarrito.png"
                    WidthRequest="100"
                    HeightRequest="100"
                    BackgroundColor="Transparent"/>
