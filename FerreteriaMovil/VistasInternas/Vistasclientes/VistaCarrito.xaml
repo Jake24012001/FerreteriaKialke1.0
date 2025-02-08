@@ -38,10 +38,10 @@
                      BackgroundColor="#e5d599"
                      HeightRequest="60"
                      Padding="5">
-            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_1"/>
-            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_2"/>
-            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked"/>
-            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" Clicked="ImageButton_Clicked_3"/>
+            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" Clicked="UsarioVista_Clicked"/>
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" Clicked="CategoriaVista_Clicked"/>
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" Clicked="CarritoVista_Clicked"/>
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" Clicked="FacturaVista_Clicked"/>
         </StackLayout>
     </Grid>
 </ContentPage>
