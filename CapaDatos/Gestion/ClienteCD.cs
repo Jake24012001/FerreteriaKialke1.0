@@ -11,10 +11,7 @@ namespace CapaDatos.Gestion
 {
     public class ClienteCD
     {
-        public static void Vidaloca()
-        {
-            Console.WriteLine("Vivir la vida");
-        }
+        
         public static void CORAZONDEMELON(){
             
             }
