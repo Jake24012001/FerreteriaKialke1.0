@@ -9,14 +9,14 @@
             <Label
                 Padding="10"
                 Text="Productos Seleccionados"
+                FontAttributes="Bold"
                 TextColor="Black"
                 FontSize="Title"
                 HorizontalTextAlignment="Center" />
             <Image x:Name="misfotos"
                    Source="iconocarrito.png"
                    WidthRequest="100"
-                   HeightRequest="100"
-                   BackgroundColor="Transparent"/>
+                   HeightRequest="100"/>
             <CollectionView ItemsSource="{Binding Items}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
