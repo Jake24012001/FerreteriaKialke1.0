@@ -10,7 +10,7 @@
         </Grid.RowDefinitions>
 
         <VerticalStackLayout Spacing="30" Grid.Row="0">
-            <Label Text="Menu Login"
+            <Label Text="MENU LOGIN"
                    FontSize="Title"
                    FontAttributes="Bold"
                    VerticalOptions="Center" 
