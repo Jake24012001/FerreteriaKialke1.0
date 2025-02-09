@@ -44,35 +44,35 @@ namespace CapaDatos.Gestion
             return lista;
         }
 
-        public static void insertarClienteCD(EntidadCliente cliente)
-        {
-            ConexionDataContext conectorBD = null;
-            try
-            {
-                conectorBD = new ConexionDataContext();
-                conectorBD.CP_InsertarCliente(cliente.IdCuenta, cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.FechaNacimiento, cliente.Telefono);
-                conectorBD.SubmitChanges();
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error al insertar ClientesCD" + error.Message);
-            }
-        }
+        //public static void insertarClienteCD(EntidadCliente cliente)
+        //{
+        //    ConexionDataContext conectorBD = null;
+        //    try
+        //    {
+        //        conectorBD = new ConexionDataContext();
+        //        conectorBD.CP_InsertarCliente(cliente.IdCuenta, cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.FechaNacimiento, cliente.Telefono);
+        //        conectorBD.SubmitChanges();
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("Error al insertar ClientesCD" + error.Message);
+        //    }
+        //}
 
-        public static void modificarClienteCD(EntidadCliente cliente)
-        {
-            ConexionDataContext conectorBD = null;
-            try
-            {
-                conectorBD = new ConexionDataContext();
-                conectorBD.CP_ModificarCliente(cliente.IdCliente, cliente.IdCuenta, cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.FechaNacimiento, cliente.Telefono);
-                conectorBD.SubmitChanges();
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error al modificar ClientesCD" + error.Message);
-            }
-        }
+        //public static void modificarClienteCD(EntidadCliente cliente)
+        //{
+        //    ConexionDataContext conectorBD = null;
+        //    try
+        //    {
+        //        conectorBD = new ConexionDataContext();
+        //        conectorBD.CP_ModificarCliente(cliente.IdCliente, cliente.IdCuenta, cliente.Cedula, cliente.Nombre, cliente.Apellido, cliente.FechaNacimiento, cliente.Telefono);
+        //        conectorBD.SubmitChanges();
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("Error al modificar ClientesCD" + error.Message);
+        //    }
+        //}
 
         public static void eliminarClienteCD(int idCliente)
         {

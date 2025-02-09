@@ -8,6 +8,6 @@ namespace CapaDatos.Gestion
 {
     public class EmpresaCD
     {
-        public static List<>
+        
     }
 }

@@ -28,34 +28,34 @@ namespace CapaDatos.Seguridad
         }
 
 
-        public static void crearCuentaCD(EntidadCuenta cuenta)
-        {
-            ConexionDataContext conectorBD = null;
-            try
-            {
-                conectorBD = new ConexionDataContext();
-                conectorBD.CP_InsertarCuenta(cuenta.Id_rol, cuenta.Mail, cuenta.Password);
-                conectorBD.SubmitChanges();
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error al crear cuentaCD" + error.Message);
-            }
-        }
+        //public static void crearCuentaCD(EntidadCuenta cuenta)
+        //{
+        //    ConexionDataContext conectorBD = null;
+        //    try
+        //    {
+        //        conectorBD = new ConexionDataContext();
+        //        conectorBD.CP_InsertarCuenta(cuenta.Id_rol, cuenta.Mail, cuenta.Password);
+        //        conectorBD.SubmitChanges();
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("Error al crear cuentaCD" + error.Message);
+        //    }
+        //}
 
-        public static void modificarCuentaCD(EntidadCuenta cuenta)
-        {
-            ConexionDataContext conectorBD = null;
-            try
-            {
-                conectorBD = new ConexionDataContext();
-                conectorBD.CP_ModificarCuenta(cuenta.Id_Cuenta, cuenta.Id_rol, cuenta.Mail, cuenta.Password);
-                conectorBD.SubmitChanges();
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine("Error al modificar cuentaCD" + error.Message);
-            }
-        }
+        //public static void modificarCuentaCD(EntidadCuenta cuenta)
+        //{
+        //    ConexionDataContext conectorBD = null;
+        //    try
+        //    {
+        //        conectorBD = new ConexionDataContext();
+        //        conectorBD.CP_ModificarCuenta(cuenta.Id_Cuenta, cuenta.Id_rol, cuenta.Mail, cuenta.Password);
+        //        conectorBD.SubmitChanges();
+        //    }
+        //    catch (Exception error)
+        //    {
+        //        Console.WriteLine("Error al modificar cuentaCD" + error.Message);
+        //    }
+        //}
     }
 }

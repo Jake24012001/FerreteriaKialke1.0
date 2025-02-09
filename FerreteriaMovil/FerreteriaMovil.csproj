@@ -123,4 +123,8 @@
 	  <Folder Include="Logica\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
+	</ItemGroup>
+
 </Project>
