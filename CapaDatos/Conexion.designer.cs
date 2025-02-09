@@ -66,7 +66,7 @@ namespace CapaDatos
     #endregion
 		
 		public ConexionDataContext() : 
-				base(global::CapaDatos.Properties.Settings.Default.FerreteriaPAConnectionString, mappingSource)
+				base(global::CapaDatos.Properties.Settings.Default.FerreteriaPAConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -190,6 +190,13 @@ namespace CapaDatos
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FiltrarVistaSalidaProudcto")]
+		public ISingleResult<FiltrarVistaSalidaProudctoResult> FiltrarVistaSalidaProudcto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string clave)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clave);
+			return ((ISingleResult<FiltrarVistaSalidaProudctoResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_EliminarCliente")]
 		public int CP_EliminarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id_Cliente", DbType="Int")] System.Nullable<int> id_Cliente)
 		{
@@ -204,6 +211,13 @@ namespace CapaDatos
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_EliminarDetalleFactura")]
+		public int CP_EliminarDetalleFactura([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idDetalleFactura)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idDetalleFactura);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_EliminarEmpresa")]
 		public int CP_EliminarEmpresa([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idEmpresa)
 		{
@@ -215,13 +229,6 @@ namespace CapaDatos
 		public int CP_EliminarEntradaProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idEntrada)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idEntrada);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_EliminarDetalleFactura")]
-		public int CP_EliminarDetalleFactura([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idDetalleFactura)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idDetalleFactura);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -456,6 +463,20 @@ namespace CapaDatos
 			return ((ISingleResult<CP_ListarEntradaProductosResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ListarFacturas")]
+		public ISingleResult<CP_ListarFacturasResult> CP_ListarFacturas()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<CP_ListarFacturasResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ListarProductos")]
+		public ISingleResult<CP_ListarProductosResult> CP_ListarProductos()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<CP_ListarProductosResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ListarProveedores")]
 		public ISingleResult<CP_ListarProveedoresResult> CP_ListarProveedores()
 		{
@@ -477,6 +498,13 @@ namespace CapaDatos
 			return ((ISingleResult<CP_ListarSalidaProductosResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ModificarCategoriaProducto")]
+		public int CP_ModificarCategoriaProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id_categoria, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string descripcion)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_categoria, nombre, descripcion);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ModificarCliente")]
 		public int CP_ModificarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id_Cliente", DbType="Int")] System.Nullable<int> id_Cliente, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Id_Cuenta", DbType="Int")] System.Nullable<int> id_Cuenta, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string apellido, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> fechaNaci, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> edad, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string telefono)
 		{
@@ -496,27 +524,6 @@ namespace CapaDatos
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_DetalleFactura, id_Producto, id_Factura, cantidad, subtotal);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ModificarCategoriaProducto")]
-		public int CP_ModificarCategoriaProducto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id_categoria, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string descripcion)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_categoria, nombre, descripcion);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ListarFacturas")]
-		public ISingleResult<CP_ListarFacturasResult> CP_ListarFacturas()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<CP_ListarFacturasResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ListarProductos")]
-		public ISingleResult<CP_ListarProductosResult> CP_ListarProductos()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<CP_ListarProductosResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CP_ModificarEmpresa")]
@@ -615,13 +622,6 @@ namespace CapaDatos
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clave);
 			return ((ISingleResult<FiltrarVistaProveedorEmpresaResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FiltrarVistaSalidaProudcto")]
-		public ISingleResult<FiltrarVistaSalidaProudctoResult> FiltrarVistaSalidaProudcto([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string clave)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clave);
-			return ((ISingleResult<FiltrarVistaSalidaProudctoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -3341,6 +3341,140 @@ namespace CapaDatos
 		}
 	}
 	
+	public partial class FiltrarVistaSalidaProudctoResult
+	{
+		
+		private int _ID;
+		
+		private string _Categoria;
+		
+		private string _Producto;
+		
+		private System.DateTime _FechaSalida;
+		
+		private int _Cantidad;
+		
+		private string _Motivo;
+		
+		private string _Observacion;
+		
+		public FiltrarVistaSalidaProudctoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categoria", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Categoria
+		{
+			get
+			{
+				return this._Categoria;
+			}
+			set
+			{
+				if ((this._Categoria != value))
+				{
+					this._Categoria = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Producto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Producto
+		{
+			get
+			{
+				return this._Producto;
+			}
+			set
+			{
+				if ((this._Producto != value))
+				{
+					this._Producto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaSalida", DbType="Date NOT NULL")]
+		public System.DateTime FechaSalida
+		{
+			get
+			{
+				return this._FechaSalida;
+			}
+			set
+			{
+				if ((this._FechaSalida != value))
+				{
+					this._FechaSalida = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cantidad", DbType="Int NOT NULL")]
+		public int Cantidad
+		{
+			get
+			{
+				return this._Cantidad;
+			}
+			set
+			{
+				if ((this._Cantidad != value))
+				{
+					this._Cantidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Motivo", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Motivo
+		{
+			get
+			{
+				return this._Motivo;
+			}
+			set
+			{
+				if ((this._Motivo != value))
+				{
+					this._Motivo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observacion", DbType="VarChar(100)")]
+		public string Observacion
+		{
+			get
+			{
+				return this._Observacion;
+			}
+			set
+			{
+				if ((this._Observacion != value))
+				{
+					this._Observacion = value;
+				}
+			}
+		}
+	}
+	
 	public partial class CP_FiltraEmpresasResult
 	{
 		
@@ -5331,6 +5465,274 @@ namespace CapaDatos
 		}
 	}
 	
+	public partial class CP_ListarFacturasResult
+	{
+		
+		private int _Id_Factura;
+		
+		private int _Id_Cliente;
+		
+		private System.DateTime _FechaEmision;
+		
+		private string _MetodoPago;
+		
+		private decimal _Total;
+		
+		private int _Iva;
+		
+		public CP_ListarFacturasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Factura", DbType="Int NOT NULL")]
+		public int Id_Factura
+		{
+			get
+			{
+				return this._Id_Factura;
+			}
+			set
+			{
+				if ((this._Id_Factura != value))
+				{
+					this._Id_Factura = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Cliente", DbType="Int NOT NULL")]
+		public int Id_Cliente
+		{
+			get
+			{
+				return this._Id_Cliente;
+			}
+			set
+			{
+				if ((this._Id_Cliente != value))
+				{
+					this._Id_Cliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaEmision", DbType="Date NOT NULL")]
+		public System.DateTime FechaEmision
+		{
+			get
+			{
+				return this._FechaEmision;
+			}
+			set
+			{
+				if ((this._FechaEmision != value))
+				{
+					this._FechaEmision = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetodoPago", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string MetodoPago
+		{
+			get
+			{
+				return this._MetodoPago;
+			}
+			set
+			{
+				if ((this._MetodoPago != value))
+				{
+					this._MetodoPago = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Total
+		{
+			get
+			{
+				return this._Total;
+			}
+			set
+			{
+				if ((this._Total != value))
+				{
+					this._Total = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iva", DbType="Int NOT NULL")]
+		public int Iva
+		{
+			get
+			{
+				return this._Iva;
+			}
+			set
+			{
+				if ((this._Iva != value))
+				{
+					this._Iva = value;
+				}
+			}
+		}
+	}
+	
+	public partial class CP_ListarProductosResult
+	{
+		
+		private int _Id_Producto;
+		
+		private int _Id_CategoriaProducto;
+		
+		private string _Nombre;
+		
+		private decimal _Precio;
+		
+		private int _Stock;
+		
+		private string _Estado;
+		
+		private string _Icono;
+		
+		private string _Descripcion;
+		
+		public CP_ListarProductosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Producto", DbType="Int NOT NULL")]
+		public int Id_Producto
+		{
+			get
+			{
+				return this._Id_Producto;
+			}
+			set
+			{
+				if ((this._Id_Producto != value))
+				{
+					this._Id_Producto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_CategoriaProducto", DbType="Int NOT NULL")]
+		public int Id_CategoriaProducto
+		{
+			get
+			{
+				return this._Id_CategoriaProducto;
+			}
+			set
+			{
+				if ((this._Id_CategoriaProducto != value))
+				{
+					this._Id_CategoriaProducto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Decimal(18,2) NOT NULL")]
+		public decimal Precio
+		{
+			get
+			{
+				return this._Precio;
+			}
+			set
+			{
+				if ((this._Precio != value))
+				{
+					this._Precio = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stock", DbType="Int NOT NULL")]
+		public int Stock
+		{
+			get
+			{
+				return this._Stock;
+			}
+			set
+			{
+				if ((this._Stock != value))
+				{
+					this._Stock = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Estado
+		{
+			get
+			{
+				return this._Estado;
+			}
+			set
+			{
+				if ((this._Estado != value))
+				{
+					this._Estado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Icono", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
+		public string Icono
+		{
+			get
+			{
+				return this._Icono;
+			}
+			set
+			{
+				if ((this._Icono != value))
+				{
+					this._Icono = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(100)")]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this._Descripcion = value;
+				}
+			}
+		}
+	}
+	
 	public partial class CP_ListarProveedoresResult
 	{
 		
@@ -5656,274 +6058,6 @@ namespace CapaDatos
 				if ((this._Observacion != value))
 				{
 					this._Observacion = value;
-				}
-			}
-		}
-	}
-	
-	public partial class CP_ListarFacturasResult
-	{
-		
-		private int _Id_Factura;
-		
-		private int _Id_Cliente;
-		
-		private System.DateTime _FechaEmision;
-		
-		private string _MetodoPago;
-		
-		private decimal _Total;
-		
-		private int _Iva;
-		
-		public CP_ListarFacturasResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Factura", DbType="Int NOT NULL")]
-		public int Id_Factura
-		{
-			get
-			{
-				return this._Id_Factura;
-			}
-			set
-			{
-				if ((this._Id_Factura != value))
-				{
-					this._Id_Factura = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Cliente", DbType="Int NOT NULL")]
-		public int Id_Cliente
-		{
-			get
-			{
-				return this._Id_Cliente;
-			}
-			set
-			{
-				if ((this._Id_Cliente != value))
-				{
-					this._Id_Cliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaEmision", DbType="Date NOT NULL")]
-		public System.DateTime FechaEmision
-		{
-			get
-			{
-				return this._FechaEmision;
-			}
-			set
-			{
-				if ((this._FechaEmision != value))
-				{
-					this._FechaEmision = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetodoPago", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string MetodoPago
-		{
-			get
-			{
-				return this._MetodoPago;
-			}
-			set
-			{
-				if ((this._MetodoPago != value))
-				{
-					this._MetodoPago = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total", DbType="Decimal(18,2) NOT NULL")]
-		public decimal Total
-		{
-			get
-			{
-				return this._Total;
-			}
-			set
-			{
-				if ((this._Total != value))
-				{
-					this._Total = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Iva", DbType="Int NOT NULL")]
-		public int Iva
-		{
-			get
-			{
-				return this._Iva;
-			}
-			set
-			{
-				if ((this._Iva != value))
-				{
-					this._Iva = value;
-				}
-			}
-		}
-	}
-	
-	public partial class CP_ListarProductosResult
-	{
-		
-		private int _Id_Producto;
-		
-		private int _Id_CategoriaProducto;
-		
-		private string _Nombre;
-		
-		private decimal _Precio;
-		
-		private int _Stock;
-		
-		private string _Estado;
-		
-		private string _Icono;
-		
-		private string _Descripcion;
-		
-		public CP_ListarProductosResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_Producto", DbType="Int NOT NULL")]
-		public int Id_Producto
-		{
-			get
-			{
-				return this._Id_Producto;
-			}
-			set
-			{
-				if ((this._Id_Producto != value))
-				{
-					this._Id_Producto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_CategoriaProducto", DbType="Int NOT NULL")]
-		public int Id_CategoriaProducto
-		{
-			get
-			{
-				return this._Id_CategoriaProducto;
-			}
-			set
-			{
-				if ((this._Id_CategoriaProducto != value))
-				{
-					this._Id_CategoriaProducto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Precio", DbType="Decimal(18,2) NOT NULL")]
-		public decimal Precio
-		{
-			get
-			{
-				return this._Precio;
-			}
-			set
-			{
-				if ((this._Precio != value))
-				{
-					this._Precio = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Stock", DbType="Int NOT NULL")]
-		public int Stock
-		{
-			get
-			{
-				return this._Stock;
-			}
-			set
-			{
-				if ((this._Stock != value))
-				{
-					this._Stock = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Estado
-		{
-			get
-			{
-				return this._Estado;
-			}
-			set
-			{
-				if ((this._Estado != value))
-				{
-					this._Estado = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Icono", DbType="VarChar(500) NOT NULL", CanBeNull=false)]
-		public string Icono
-		{
-			get
-			{
-				return this._Icono;
-			}
-			set
-			{
-				if ((this._Icono != value))
-				{
-					this._Icono = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(100)")]
-		public string Descripcion
-		{
-			get
-			{
-				return this._Descripcion;
-			}
-			set
-			{
-				if ((this._Descripcion != value))
-				{
-					this._Descripcion = value;
 				}
 			}
 		}
@@ -6887,140 +7021,6 @@ namespace CapaDatos
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observacion", DbType="VarChar(50)")]
-		public string Observacion
-		{
-			get
-			{
-				return this._Observacion;
-			}
-			set
-			{
-				if ((this._Observacion != value))
-				{
-					this._Observacion = value;
-				}
-			}
-		}
-	}
-	
-	public partial class FiltrarVistaSalidaProudctoResult
-	{
-		
-		private int _ID;
-		
-		private string _Categoria;
-		
-		private string _Producto;
-		
-		private System.DateTime _FechaSalida;
-		
-		private int _Cantidad;
-		
-		private string _Motivo;
-		
-		private string _Observacion;
-		
-		public FiltrarVistaSalidaProudctoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Categoria", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Categoria
-		{
-			get
-			{
-				return this._Categoria;
-			}
-			set
-			{
-				if ((this._Categoria != value))
-				{
-					this._Categoria = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Producto", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Producto
-		{
-			get
-			{
-				return this._Producto;
-			}
-			set
-			{
-				if ((this._Producto != value))
-				{
-					this._Producto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FechaSalida", DbType="Date NOT NULL")]
-		public System.DateTime FechaSalida
-		{
-			get
-			{
-				return this._FechaSalida;
-			}
-			set
-			{
-				if ((this._FechaSalida != value))
-				{
-					this._FechaSalida = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cantidad", DbType="Int NOT NULL")]
-		public int Cantidad
-		{
-			get
-			{
-				return this._Cantidad;
-			}
-			set
-			{
-				if ((this._Cantidad != value))
-				{
-					this._Cantidad = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Motivo", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Motivo
-		{
-			get
-			{
-				return this._Motivo;
-			}
-			set
-			{
-				if ((this._Motivo != value))
-				{
-					this._Motivo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Observacion", DbType="VarChar(100)")]
 		public string Observacion
 		{
 			get
