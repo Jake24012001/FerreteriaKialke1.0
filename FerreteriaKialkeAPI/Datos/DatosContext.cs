@@ -18,5 +18,8 @@ namespace FerreteriaKialkeAPI.Datos
         public DbSet<Producto> Producto { get; set; }
         public DbSet<Proveedor> Proveedore { get; set; }
         public DbSet<Rol> Rols { get; set; }
+
+
+        
     }
 }
