@@ -69,7 +69,7 @@ namespace CapaDatos.Gestion
             try
             {
                 conectorBD = new ConexionDataContext();
-                conectorBD.CP_InsertarProducto(producto.IdCategoriaProducto, producto.Nombre, producto.Precio, producto.Stock, producto.Estado, producto.Descripcion);
+                conectorBD.CP_InsertarProducto(producto.IdCategoriaProducto, producto.Nombre, producto.Precio, producto.Stock, producto.Estado, producto.Icono, producto.Descripcion);
                 conectorBD.SubmitChanges();
             }
             catch (Exception error)
@@ -84,7 +84,7 @@ namespace CapaDatos.Gestion
             try
             {
                 conectorBD = new ConexionDataContext();
-                conectorBD.CP_ModificarProducto(producto.IdProducto, producto.IdCategoriaProducto, producto.Nombre, producto.Precio, producto.Stock, producto.Estado, producto.Descripcion);
+                conectorBD.CP_ModificarProducto(producto.IdProducto, producto.IdCategoriaProducto, producto.Nombre, producto.Precio, producto.Stock, producto.Estado, producto.Icono, producto.Descripcion);
                 conectorBD.SubmitChanges();
             }
             catch (Exception error)
