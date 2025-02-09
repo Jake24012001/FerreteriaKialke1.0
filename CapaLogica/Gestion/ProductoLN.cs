@@ -28,6 +28,22 @@ namespace CapaLogica.Gestion
             return lista;
         }
 
+        public static List<ProductoCategoria> listarVistaProductosLN()
+        {
+            List<ProductoCategoria> lista = null;
+            try
+            {
+                var sql = from x in ProductoCD.listarVistaProductosCD()
+                          select new ProductoCategoria(x.ID, x.Categoria, x.Producto, x.Precio, x.Stock, x.Estado, x.Icono, x.Descripcion);
+                lista = sql.ToList();
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine("Error en filtrar Vista Productos LN" + error.Message);
+            }
+            return lista;
+        }
+
         public static List<Producto> listarProductosLN()
         {
             List<Producto> lista = null;   
