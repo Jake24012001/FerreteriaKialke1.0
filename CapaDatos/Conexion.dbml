@@ -1,11 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FerreteriaPA" Class="ConexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=CASA;Initial Catalog=FerreteriaPA;Integrated Security=True;Encrypt=False" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="FerreteriaPAConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FerreteriaChalquin" Class="ConexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M2DUKGS;Initial Catalog=FerreteriaChalquin;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="FerreteriaChalquinConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CategoriaProducto" Member="CategoriaProducto">
     <Type Name="CategoriaProducto">
       <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="CategoriaProducto_Producto" Member="Producto" ThisKey="Id_CategoriaProducto" OtherKey="Id_CategoriaProducto" Type="Producto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SalidaProducto" Member="SalidaProducto">
+    <Type Name="SalidaProducto">
+      <Column Name="Id_SalidaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaSalida" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Producto_SalidaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Cliente" Member="Cliente">
@@ -92,9 +103,9 @@
       <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Icono" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Producto_SalidaProducto" Member="SalidaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="SalidaProducto" />
       <Association Name="Producto_DetalleFactura" Member="DetalleFactura" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="DetalleFactura" />
       <Association Name="Producto_EntradaProducto" Member="EntradaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="EntradaProducto" />
-      <Association Name="Producto_SalidaProducto" Member="SalidaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="SalidaProducto" />
       <Association Name="CategoriaProducto_Producto" Member="CategoriaProducto" ThisKey="Id_CategoriaProducto" OtherKey="Id_CategoriaProducto" Type="CategoriaProducto" IsForeignKey="true" />
     </Type>
   </Table>
@@ -118,17 +129,6 @@
       <Column Name="Id_rol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Rol_Cuenta" Member="Cuenta" ThisKey="Id_rol" OtherKey="Id_rol" Type="Cuenta" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SalidaProducto" Member="SalidaProducto">
-    <Type Name="SalidaProducto">
-      <Column Name="Id_SalidaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FechaSalida" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Motivo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Producto_SalidaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.CP_EliminarCategoriaProducto" Method="CP_EliminarCategoriaProducto">
