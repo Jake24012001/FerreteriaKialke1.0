@@ -209,6 +209,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frmEditProveedor";
             this.Text = "frmEditProveedor";
+            this.Load += new System.EventHandler(this.frmEditProveedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
