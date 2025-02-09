@@ -11,6 +11,7 @@
         public int Id_Cliente { get; set; }
         public Cliente Cliente { get; set; }
 
+        public ICollection<DetalleFactura> DetalleFacturas { get; set; }
 
     }
 }

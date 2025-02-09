@@ -8,6 +8,7 @@
         public int Stock { get; set; }
         public int Id_CategoriaProducto { get; set; }
         public CategoriaProducto Categoria { get; set; }
-       
+        public ICollection<DetalleFactura> DetalleFacturas { get; set; }
+
     }
 }
