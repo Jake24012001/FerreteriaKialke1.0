@@ -14,6 +14,7 @@ namespace CapaEntidades.Gestion
         private decimal precio;
         private int stock;
         private string estado;
+        private string icono;
         private string descripcion;
 
         public Producto()
@@ -21,7 +22,7 @@ namespace CapaEntidades.Gestion
 
         }
 
-        public Producto(int idProducto, int idCategoriaProducto, string nombre, decimal precio, int stock, string estado, string descripcion)
+        public Producto(int idProducto, int idCategoriaProducto, string nombre, decimal precio, int stock, string estado, string icono, string descripcion)
         {
             this.idProducto = idProducto;
             this.idCategoriaProducto = idCategoriaProducto;
@@ -29,16 +30,18 @@ namespace CapaEntidades.Gestion
             this.precio = precio;
             this.stock = stock;
             this.estado = estado;
+            this.icono = icono;
             this.descripcion = descripcion;
         }
 
-        public Producto(int idCategoriaProducto, string nombre, decimal precio, int stock, string estado, string descripcion)
+        public Producto(int idCategoriaProducto, string nombre, decimal precio, int stock, string estado, string icono, string descripcion)
         {
             this.idCategoriaProducto = idCategoriaProducto;
             this.nombre = nombre;
             this.precio = precio;
             this.stock = stock;
             this.estado = estado;
+            this.icono = icono;
             this.descripcion = descripcion;
         }
 
@@ -48,8 +51,8 @@ namespace CapaEntidades.Gestion
         public decimal Precio { get => precio; set => precio = value; }
         public int Stock { get => stock; set => stock = value; }
         public string Estado { get => estado; set => estado = value; }
+        public string Icono { get => icono; set => icono = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
-
-
+        
     }
 }

@@ -18,7 +18,7 @@ namespace CapaLogica.Gestion
             try
             {
                 var sql = from x in ProductoCD.listarProductosCD()
-                          select new Producto(x.Id_Producto, x.Id_CategoriaProducto, x.Nombre, x.Precio, x.Stock, x.Estado, x.Descripcion);
+                          select new Producto(x.Id_Producto, x.Id_CategoriaProducto, x.Nombre, x.Precio, x.Stock, x.Estado, x.Icono, x.Descripcion);
                 lista = sql.ToList();
             }
             catch (Exception error)
@@ -34,7 +34,7 @@ namespace CapaLogica.Gestion
             try
             {
                 var sql = from x in ProductoCD.listarProductosCD()
-                          select new Producto(x.Id_Producto, x.Id_CategoriaProducto, x.Nombre, x.Precio, x.Stock, x.Estado, x.Descripcion);
+                          select new Producto(x.Id_Producto, x.Id_CategoriaProducto, x.Nombre, x.Precio, x.Stock, x.Estado, x.Icono, x.Descripcion);
                 lista = sql.ToList();
             }
             catch (Exception error)

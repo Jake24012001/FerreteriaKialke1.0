@@ -54,7 +54,14 @@
     <Compile Include="Gestion\Rol.cs" />
     <Compile Include="Gestion\SalidaProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\ClienteCuentaMail.cs" />
+    <Compile Include="Vistas\CuentaRol.cs" />
+    <Compile Include="Vistas\DetalleFactura.cs" />
+    <Compile Include="Vistas\EntradaProducto.cs" />
+    <Compile Include="Vistas\FacturaCliente.cs" />
     <Compile Include="Vistas\ProductoCategoria.cs" />
+    <Compile Include="Vistas\ProveedorEmpresa.cs" />
+    <Compile Include="Vistas\SalidaProducto.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
