@@ -1,22 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FerreteriaChalquin" Class="ConexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M2DUKGS;Initial Catalog=FerreteriaChalquin;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="FerreteriaChalquinConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FerreteriaPA" Class="ConexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CASA;Initial Catalog=FerreteriaPA;Integrated Security=True;Encrypt=False" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="FerreteriaPAConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CategoriaProducto" Member="CategoriaProducto">
     <Type Name="CategoriaProducto">
       <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="CategoriaProducto_Producto" Member="Producto" ThisKey="Id_CategoriaProducto" OtherKey="Id_CategoriaProducto" Type="Producto" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SalidaProducto" Member="SalidaProducto">
-    <Type Name="SalidaProducto">
-      <Column Name="Id_SalidaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FechaSalida" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Motivo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Producto_SalidaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Cliente" Member="Cliente">
@@ -77,8 +66,8 @@
       <Column Name="CostoUnitario" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="CostoTotal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Producto_EntradaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
       <Association Name="Proveedor_EntradaProducto" Member="Proveedor" ThisKey="Id_Proveedor" OtherKey="Id_Proveedor" Type="Proveedor" IsForeignKey="true" />
+      <Association Name="Producto_EntradaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Factura" Member="Factura">
@@ -91,22 +80,6 @@
       <Column Name="Iva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Factura_DetalleFactura" Member="DetalleFactura" ThisKey="Id_Factura" OtherKey="Id_Factura" Type="DetalleFactura" />
       <Association Name="Cliente_Factura" Member="Cliente" ThisKey="Id_Cliente" OtherKey="Id_Cliente" Type="Cliente" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Producto" Member="Producto">
-    <Type Name="Producto">
-      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Icono" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Association Name="Producto_SalidaProducto" Member="SalidaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="SalidaProducto" />
-      <Association Name="Producto_DetalleFactura" Member="DetalleFactura" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="DetalleFactura" />
-      <Association Name="Producto_EntradaProducto" Member="EntradaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="EntradaProducto" />
-      <Association Name="CategoriaProducto_Producto" Member="CategoriaProducto" ThisKey="Id_CategoriaProducto" OtherKey="Id_CategoriaProducto" Type="CategoriaProducto" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Proveedor" Member="Proveedor">
@@ -124,6 +97,22 @@
       <Association Name="Empresa_Proveedor" Member="Empresa" ThisKey="Id_Empresa" OtherKey="Id_Empresa" Type="Empresa" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Producto" Member="Producto">
+    <Type Name="Producto">
+      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Icono" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Producto_DetalleFactura" Member="DetalleFactura" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="DetalleFactura" />
+      <Association Name="Producto_EntradaProducto" Member="EntradaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="EntradaProducto" />
+      <Association Name="Producto_SalidaProducto" Member="SalidaProducto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="SalidaProducto" />
+      <Association Name="CategoriaProducto_Producto" Member="CategoriaProducto" ThisKey="Id_CategoriaProducto" OtherKey="Id_CategoriaProducto" Type="CategoriaProducto" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Rol" Member="Rol">
     <Type Name="Rol">
       <Column Name="Id_rol" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -131,20 +120,27 @@
       <Association Name="Rol_Cuenta" Member="Cuenta" ThisKey="Id_rol" OtherKey="Id_rol" Type="Cuenta" />
     </Type>
   </Table>
+  <Table Name="dbo.SalidaProducto" Member="SalidaProducto">
+    <Type Name="SalidaProducto">
+      <Column Name="Id_SalidaProducto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaSalida" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Motivo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Producto_SalidaProducto" Member="Producto" ThisKey="Id_Producto" OtherKey="Id_Producto" Type="Producto" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.CP_EliminarCategoriaProducto" Method="CP_EliminarCategoriaProducto">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.CP_EliminarCuenta" Method="CP_EliminarCuenta">
-    <Parameter Name="idCuenta" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.CP_EliminarDetalleFactura" Method="CP_EliminarDetalleFactura">
-    <Parameter Name="idDetalleFactura" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.CP_EliminarCliente" Method="CP_EliminarCliente">
     <Parameter Name="Id_Cliente" Parameter="id_Cliente" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CP_EliminarCuenta" Method="CP_EliminarCuenta">
+    <Parameter Name="idCuenta" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.CP_EliminarEmpresa" Method="CP_EliminarEmpresa">
@@ -153,6 +149,10 @@
   </Function>
   <Function Name="dbo.CP_EliminarEntradaProducto" Method="CP_EliminarEntradaProducto">
     <Parameter Name="idEntrada" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CP_EliminarDetalleFactura" Method="CP_EliminarDetalleFactura">
+    <Parameter Name="idDetalleFactura" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.CP_EliminarFactura" Method="CP_EliminarFactura">
@@ -202,6 +202,14 @@
       <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.CP_FiltrarCategoriasProductos" Method="CP_FiltrarCategoriasProductos">
+    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="CP_FiltrarCategoriasProductosResult">
+      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.CP_FiltrarClientes" Method="CP_FiltrarClientes">
     <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="CP_FiltrarClientesResult">
@@ -212,14 +220,6 @@
       <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Edad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Telefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.CP_FiltrarCategoriasProductos" Method="CP_FiltrarCategoriasProductos">
-    <Parameter Name="Valor" Parameter="valor" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="CP_FiltrarCategoriasProductosResult">
-      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.CP_FiltrarCuentas" Method="CP_FiltrarCuentas">
@@ -447,28 +447,6 @@
       <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CP_ListarFacturas" Method="CP_ListarFacturas">
-    <ElementType Name="CP_ListarFacturasResult">
-      <Column Name="Id_Factura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Id_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="FechaEmision" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Iva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.CP_ListarProductos" Method="CP_ListarProductos">
-    <ElementType Name="CP_ListarProductosResult">
-      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Icono" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
-      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.CP_ListarProveedores" Method="CP_ListarProveedores">
     <ElementType Name="CP_ListarProveedoresResult">
       <Column Name="Id_Proveedor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -498,12 +476,6 @@
       <Column Name="Observacion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CP_ModificarCategoriaProducto" Method="CP_ModificarCategoriaProducto">
-    <Parameter Name="id_categoria" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.CP_ModificarCliente" Method="CP_ModificarCliente">
     <Parameter Name="Id_Cliente" Parameter="id_Cliente" Type="System.Int32" DbType="Int" />
     <Parameter Name="Id_Cuenta" Parameter="id_Cuenta" Type="System.Int32" DbType="Int" />
@@ -528,6 +500,34 @@
     <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
     <Parameter Name="subtotal" Type="System.Decimal" DbType="Decimal(18,2)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CP_ModificarCategoriaProducto" Method="CP_ModificarCategoriaProducto">
+    <Parameter Name="id_categoria" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CP_ListarFacturas" Method="CP_ListarFacturas">
+    <ElementType Name="CP_ListarFacturasResult">
+      <Column Name="Id_Factura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_Cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaEmision" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Iva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CP_ListarProductos" Method="CP_ListarProductos">
+    <ElementType Name="CP_ListarProductosResult">
+      <Column Name="Id_Producto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_CategoriaProducto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Icono" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.CP_ModificarEmpresa" Method="CP_ModificarEmpresa">
     <Parameter Name="Id_Empresa" Parameter="id_Empresa" Type="System.Int32" DbType="Int" />
@@ -618,6 +618,17 @@
       <Column Name="Mail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.FiltrarVistaDetalleFactura" Method="FiltrarVistaDetalleFactura">
+    <Parameter Name="clave" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="FiltrarVistaDetalleFacturaResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Producto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.FiltrarVistaEntradaProudcto" Method="FiltrarVistaEntradaProudcto">
     <Parameter Name="clave" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="FiltrarVistaEntradaProudctoResult">
@@ -645,17 +656,6 @@
       <Column Name="MetodoPago" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="[%IVA]" Member="_IVA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="[$Total]" Member="_Total" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.FiltrarVistaDetalleFactura" Method="FiltrarVistaDetalleFactura">
-    <Parameter Name="clave" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="FiltrarVistaDetalleFacturaResult">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Categoria" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Producto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Precio" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Subtotal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.FiltrarVistaProductoCategoria" Method="FiltrarVistaProductoCategoria">
