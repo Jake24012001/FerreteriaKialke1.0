@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaMovil", "FerreteriaMovil\FerreteriaMovil.csproj", "{8E704E68-7B50-44A2-A298-6C6419209006}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaKialkeAPI", "FerreteriaKialkeAPI\FerreteriaKialkeAPI.csproj", "{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{DEA399A4-84B9-4B4D-9CCD-3D3863698E2F}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{53C59288-20A2-4A74-BC50-02CBA6FAC019}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaAdmin", "PresentacioFerreteria\FerreteriaAdmin.csproj", "{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaKialkeWEB", "FerreteriaKialkeWEB\FerreteriaKialkeWEB.csproj", "{56DE9302-BD79-4BEF-947A-B998D31C2545}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +26,6 @@ Global
 		{8E704E68-7B50-44A2-A298-6C6419209006}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{8E704E68-7B50-44A2-A298-6C6419209006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E704E68-7B50-44A2-A298-6C6419209006}.Release|Any CPU.Build.0 = Release|Any CPU
-		{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{307F2B60-4156-4D45-8E97-8D8EFFDE7D7C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +42,10 @@ Global
 		{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

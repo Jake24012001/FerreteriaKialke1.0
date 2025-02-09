@@ -6,52 +6,58 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades.Gestion
 {
-    public class Cliente
+    public class Proveedor
     {
-
-        private int idCliente;
-        private int idCuenta;
+        private int idProveedor;
+        private int idEmpresa;
         private string nombre;
         private string apellido;
         private DateTime fechaNacimiento;
         private int edad;
+        private string mail;
         private string telefono;
+        private string observacion;
 
 
-        public Cliente()
+        public Proveedor()
         {
 
         }
 
-        public Cliente(int idCliente, int idCuenta, string nombre, string apellido, DateTime fechaNacimiento, int edad, string telefono)
+        public Proveedor(int idProveedor, int idEmpresa, string nombre, string apellido, DateTime fechaNacimiento, int edad, string mail, string telefono, string observacion)
         {
-            this.idCliente = idCliente;
-            this.idCuenta = idCuenta;
+            this.idProveedor = idProveedor;
+            this.idEmpresa = idEmpresa;
             this.nombre = nombre;
             this.apellido = apellido;
             this.fechaNacimiento = fechaNacimiento;
             this.edad = edad;
+            this.mail = mail;
             this.telefono = telefono;
+            this.observacion = observacion;
         }
 
-        public Cliente(int idCuenta, string nombre, string apellido, DateTime fechaNacimiento, int edad, string telefono)
+        public Proveedor(int idEmpresa, string nombre, string apellido, DateTime fechaNacimiento, int edad, string mail, string telefono, string observacion)
         {
-            this.idCuenta = idCuenta;
+            this.idEmpresa = idEmpresa;
             this.nombre = nombre;
             this.apellido = apellido;
             this.fechaNacimiento = fechaNacimiento;
             this.edad = edad;
+            this.mail = mail;
             this.telefono = telefono;
+            this.observacion = observacion;
         }
 
-
-
-        public int IdCliente { get => idCliente; set => idCliente = value; }
-        public int IdCuenta { get => idCuenta; set => idCuenta = value; }
+        public int IdProveedor { get => idProveedor; set => idProveedor = value; }
+        public int IdEmpresa { get => idEmpresa; set => idEmpresa = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public int Edad { get => edad; set => edad = value; }
+        public string Mail { get => mail; set => mail = value; }
         public string Telefono { get => telefono; set => telefono = value; }
+        public string Observacion { get => observacion; set => observacion = value; }
+
     }
 }

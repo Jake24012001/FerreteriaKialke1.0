@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaDatos.Gestion
+namespace CapaLogica.Seguridad
 {
-    public class EmpresaCD
+    public class CuentaLN
     {
-        
+
     }
 }
