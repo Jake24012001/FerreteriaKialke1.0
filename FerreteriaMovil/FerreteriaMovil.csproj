@@ -124,6 +124,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj" />
 	  <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
 	</ItemGroup>
 

@@ -18,10 +18,11 @@ public partial class VistaMenuClientes : ContentPage
         //    new Producto { Imagen = "https://bpecuador.com/wp-content/uploads/2024/03/palan-puntona-mango-plastico-1.png", Nombre = "Pala", Descripcion = "Palitas", Precio = "$00.00" },
         //    // Añade más productos aquí
         //};
+
         ProductosCollectionView.ItemsSource = ProductoLN.filtrarVistaProductosLN("");
     }
-   
-   
+
+
     //public class Producto
     //{
     //    public string Imagen { get; set; }

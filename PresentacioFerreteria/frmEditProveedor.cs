@@ -15,9 +15,16 @@ namespace FerreteriaAdmin
         public frmEditProveedor()
         {
             InitializeComponent();
+            textBox2.Enabled = false;
         }
+       
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmEditProveedor_Load(object sender, EventArgs e)
         {
 
         }
