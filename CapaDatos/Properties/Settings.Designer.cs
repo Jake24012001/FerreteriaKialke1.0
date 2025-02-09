@@ -44,5 +44,16 @@ namespace CapaDatos.Properties {
                 return ((string)(this["FerreteriaChalquinConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-M2DUKGS;Initial Catalog=FerreteriaPA;Integrated Security=True" +
+            ";TrustServerCertificate=True")]
+        public string FerreteriaPAConnectionString1 {
+            get {
+                return ((string)(this["FerreteriaPAConnectionString1"]));
+            }
+        }
     }
 }
