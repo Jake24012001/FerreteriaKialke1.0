@@ -23,6 +23,23 @@ namespace CapaDatos.Gestion
             }
             catch (Exception error)
             {
+                Console.WriteLine("Error en filtrar Vista Productos CD" + error.Message);
+            }
+            return lista;
+        }
+
+        public static List<listarVistaProductoCategoriaResult> listarVistaProductosCD()
+        {
+            ConexionDataContext conectorBD = null;
+            List<listarVistaProductoCategoriaResult> lista = null;
+            try
+            {
+                conectorBD = new ConexionDataContext();
+                lista = conectorBD.listarVistaProductoCategoria().ToList();
+                conectorBD.SubmitChanges();
+            }
+            catch (Exception error)
+            {
                 Console.WriteLine("Error en listar Vista Productos CD" + error.Message);
             }
             return lista;
