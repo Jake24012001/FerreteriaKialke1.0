@@ -42,8 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Gestion\CategoriaProducto.cs" />
     <Compile Include="Gestion\Cliente.cs" />
     <Compile Include="Gestion\Cuenta.cs" />
+    <Compile Include="Gestion\DetalleFactura.cs" />
+    <Compile Include="Gestion\Empresa.cs" />
+    <Compile Include="Gestion\EntradaProducto.cs" />
+    <Compile Include="Gestion\Factura.cs" />
+    <Compile Include="Gestion\Producto.cs" />
+    <Compile Include="Gestion\Proveedor.cs" />
+    <Compile Include="Gestion\Rol.cs" />
+    <Compile Include="Gestion\SalidaProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
