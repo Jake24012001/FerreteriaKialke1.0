@@ -1,0 +1,6 @@
+@FerreteriaKialkeWEB_HostAddress = http://localhost:5211
+
+GET {{FerreteriaKialkeWEB_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
