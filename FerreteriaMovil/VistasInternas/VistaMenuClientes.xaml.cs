@@ -21,8 +21,8 @@ public partial class VistaMenuClientes : ContentPage
 
         ProductosCollectionView.ItemsSource = ProductoLN.filtrarVistaProductosLN("");
     }
-   
-   
+
+
     //public class Producto
     //{
     //    public string Imagen { get; set; }
