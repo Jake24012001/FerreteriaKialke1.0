@@ -1,4 +1,4 @@
-﻿using Cliente = FerreteriaKialke.CapaEntidades.Gestion.Cliente;
+﻿using Cliente = CapaEntidades.Gestion.Cliente;
 using ClienteCD = CapaDatos.Gestion.ClienteCD;
 using System;
 using System.Collections.Generic;

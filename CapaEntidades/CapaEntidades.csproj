@@ -54,9 +54,8 @@
     <Compile Include="Gestion\Rol.cs" />
     <Compile Include="Gestion\SalidaProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\ProductoCategoria.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vistas\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
