@@ -60,7 +60,7 @@ namespace CapaDatos.Gestion
             return lista;
         }
 
-        public static void insertarProductosCD(EntidadProducto producto)
+        public static void insertarProductosCD(CapaEntidades.Gestion.Producto producto)
         {
             ConexionDataContext conectorBD = null;
             try
@@ -75,7 +75,7 @@ namespace CapaDatos.Gestion
             }
         }
 
-        public static void modificarProductosCD(EntidadProducto producto)
+        public static void modificarProductosCD(CapaEntidades.Gestion.Producto producto)
         {
             ConexionDataContext conectorBD = null;
             try
