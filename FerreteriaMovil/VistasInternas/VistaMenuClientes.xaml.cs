@@ -8,7 +8,7 @@ namespace FerreteriaMovil.VistasInternas;
 public partial class VistaMenuClientes : ContentPage
 {
     {
-        public ObservableCollection<Producto> Productos { get; set; }
+        public ObservableCollection<CapaEntidades.Gestion.Producto> Productos { get; set; }
     public VistaMenuClientes()
     {
         InitializeComponent();
