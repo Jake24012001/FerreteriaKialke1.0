@@ -1,17 +1,27 @@
-﻿namespace FerreteriaKialkeWEB.Modelado
+﻿using System;
+using System.Collections.Generic;
+
+namespace FerreteriaPAweb.Models;
+
+public partial class Empresa
 {
-    public class Empresa
-    {
-        public int Id_Empresa { get; set; }
-        public string Nombre { get; set; }
-        public string Ruc { get; set; }
-        public string Direccion { get; set; }
-        public string Representante { get; set; }
-        public string Telefono { get; set; }
-        public string Mail { get; set; }
-        public string Descripcion { get; set; }
-        public string Observacion { get; set; }
+    public int IdEmpresa { get; set; }
 
+    public string Nombre { get; set; } = null!;
 
-    }
+    public string Ruc { get; set; } = null!;
+
+    public string Direccion { get; set; } = null!;
+
+    public string Representante { get; set; } = null!;
+
+    public string Telefono { get; set; } = null!;
+
+    public string Mail { get; set; } = null!;
+
+    public string? Descripcion { get; set; }
+
+    public string? Observacion { get; set; }
+
+    public virtual ICollection<Proveedor> Proveedors { get; set; } = new List<Proveedor>();
 }

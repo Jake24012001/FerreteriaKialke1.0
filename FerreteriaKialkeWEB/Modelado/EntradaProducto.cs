@@ -1,17 +1,25 @@
-﻿namespace FerreteriaKialkeWEB.Modelado
+﻿using System;
+using System.Collections.Generic;
+
+namespace FerreteriaPAweb.Models;
+
+public partial class EntradaProducto
 {
-    public class EntradaProducto
-    {
-        public int Id_EntradaProducto { get; set; }
-        public int Id_Producto { get; set; }
-        public int Id_Proveedor { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        public int Cantidad { get; set; }
-        public decimal CostoUnitario { get; set; }
-        public string Observacion { get; set; }
+    public int IdEntradaProducto { get; set; }
 
+    public int IdProducto { get; set; }
 
-        public Producto Producto { get; set; }
-        public Proveedor Proveedor { get; set; }
-    }
+    public int IdProveedor { get; set; }
+
+    public DateOnly FechaIngreso { get; set; }
+
+    public int Cantidad { get; set; }
+
+    public decimal CostoUnitario { get; set; }
+
+    public string? Observacion { get; set; }
+
+    public virtual Producto IdProductoNavigation { get; set; } = null!;
+
+    public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
 }
