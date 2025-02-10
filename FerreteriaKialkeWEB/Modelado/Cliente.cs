@@ -1,18 +1,25 @@
-﻿namespace FerreteriaKialkeWEB.Modelado
+﻿using System;
+using System.Collections.Generic;
+
+namespace FerreteriaPAweb.Models;
+
+public partial class Cliente
 {
-    public class Cliente
-    {
-        public int Id_Cliente { get; set; }
-        public string Cedula { get; set; }
-        public string Nombres { get; set; }
-        public string Apellidos { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Telefono { get; set; }
+    public int IdCliente { get; set; }
 
-        public int Id_Cuenta { get; set; }
-        public Cuenta Cuenta { get; set; }
+    public int? IdCuenta { get; set; }
 
+    public string Cedula { get; set; } = null!;
 
+    public string Nombres { get; set; } = null!;
 
-    }
+    public string Apellidos { get; set; } = null!;
+
+    public DateOnly FechaNacimiento { get; set; }
+
+    public string Telefono { get; set; } = null!;
+
+    public virtual ICollection<Factura> Facturas { get; set; } = new List<Factura>();
+
+    public virtual Cuenta? IdCuentaNavigation { get; set; }
 }

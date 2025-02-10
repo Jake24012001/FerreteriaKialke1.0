@@ -1,14 +1,21 @@
-﻿namespace FerreteriaKialkeWEB.Modelado
+﻿using System;
+using System.Collections.Generic;
+
+namespace FerreteriaPAweb.Models;
+
+public partial class DetalleFactura
 {
-    public class DetalleFactura
-    {
-        public int Id_DetalleFactura { get; set; }
-        public int Id_Factura { get; set; }
-        public int Id_Producto { get; set; }
-        public int Cantidad { get; set; }
-        public int Subtotal { get; set; }
-        public double Descuentos { get; set; }
-        public Factura Factura { get; set; }
-        public Producto Producto { get; set; }
-    }
+    public int IdDetalleFactura { get; set; }
+
+    public int IdProducto { get; set; }
+
+    public int IdFactura { get; set; }
+
+    public int Cantidad { get; set; }
+
+    public decimal Subtotal { get; set; }
+
+    public virtual Factura IdFacturaNavigation { get; set; } = null!;
+
+    public virtual Producto IdProductoNavigation { get; set; } = null!;
 }
