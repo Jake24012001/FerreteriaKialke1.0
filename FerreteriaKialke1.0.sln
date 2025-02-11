@@ -5,15 +5,21 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaMovil", "FerreteriaMovil\FerreteriaMovil.csproj", "{8E704E68-7B50-44A2-A298-6C6419209006}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{B473C7BF-AC44-40EC-826F-EEFDCCAF5EB9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{DEA399A4-84B9-4B4D-9CCD-3D3863698E2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{DEA399A4-84B9-4B4D-9CCD-3D3863698E2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{53C59288-20A2-4A74-BC50-02CBA6FAC019}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{53C59288-20A2-4A74-BC50-02CBA6FAC019}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaAdmin", "PresentacioFerreteria\FerreteriaAdmin.csproj", "{89B18359-BE07-48B1-BE4B-B8AC8C43DC9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FerreteriaKialkeWEB", "FerreteriaKialkeWEB\FerreteriaKialkeWEB.csproj", "{56DE9302-BD79-4BEF-947A-B998D31C2545}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerreteriaKialkeWEB", "FerreteriaKialkeWEB\FerreteriaKialkeWEB.csproj", "{56DE9302-BD79-4BEF-947A-B998D31C2545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatosM", "CapaDatosM\CapaDatosM.csproj", "{A4390DCA-BFFA-4CE8-A52E-BA26D5D403BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogicaM", "CapaLogicaM\CapaLogicaM.csproj", "{97B4A795-D88D-4688-8884-70367D3594C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidadesM", "CapaEntidadesM\CapaEntidadesM.csproj", "{73C264AC-64CC-4CBD-8073-9851F6FBF3AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +52,18 @@ Global
 		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56DE9302-BD79-4BEF-947A-B998D31C2545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4390DCA-BFFA-4CE8-A52E-BA26D5D403BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4390DCA-BFFA-4CE8-A52E-BA26D5D403BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4390DCA-BFFA-4CE8-A52E-BA26D5D403BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4390DCA-BFFA-4CE8-A52E-BA26D5D403BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B4A795-D88D-4688-8884-70367D3594C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B4A795-D88D-4688-8884-70367D3594C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B4A795-D88D-4688-8884-70367D3594C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B4A795-D88D-4688-8884-70367D3594C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C264AC-64CC-4CBD-8073-9851F6FBF3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C264AC-64CC-4CBD-8073-9851F6FBF3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C264AC-64CC-4CBD-8073-9851F6FBF3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C264AC-64CC-4CBD-8073-9851F6FBF3AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
