@@ -55,7 +55,71 @@ namespace FerreteriaKialkeWEB.Controladores
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message, respuesta = oCuenta });
             }
         }
+        [HttpPost]
+        [Route("Guardar")]
+        public IActionResult Guardar([FromBody] Cuenta objeto)
+        {
+            try
+            {
+                context.Cuenta.Add(objeto);
+                context.SaveChanges();
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Cuenta" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        [Route("Editar")]
+        public IActionResult Editar([FromBody] Cuenta objeto)
+        {
+            Cuenta oCuenta = context.Cuenta.Find(objeto.IdCuenta);
+            if (oCuenta == null)
+            {
+                return BadRequest("Cuenta no encontrado");
+            }
+            try
+            {
+                oCuenta.Mail = objeto.Mail is null ? oCuenta.Mail : objeto.Mail;
+                oCuenta.Password = objeto.Password is null ? oCuenta.Password : objeto.Password;
 
 
+                context.Cuenta.Add(objeto);
+                context.SaveChanges();
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Cuenta" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+            }
+        }
+
+
+        [HttpDelete]
+        [Route("Eliminar")]
+        public IActionResult Eliminar(int idCuenta)
+        {
+            Cuenta oCuenta = context.Cuenta.Find(idCuenta);
+            if (oCuenta == null)
+            {
+                return BadRequest("Rol no encontrado");
+            }
+            try
+            {
+
+                context.Cuenta.Remove(oCuenta);
+                context.SaveChanges();
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Cuenta" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+            }
+        }
     }
 }
