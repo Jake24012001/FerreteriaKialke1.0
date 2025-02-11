@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>PresentacioFerreteria</RootNamespace>
     <AssemblyName>PresentacioFerreteria</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -134,14 +134,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
-      <Project>{dea399a4-84b9-4b4d-9ccd-3d3863698e2f}</Project>
-      <Name>CapaEntidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
-      <Project>{53c59288-20a2-4a74-bc50-02cba6fac019}</Project>
-      <Name>CapaLogica</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj" />
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
