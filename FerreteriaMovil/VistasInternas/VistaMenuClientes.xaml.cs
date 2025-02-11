@@ -1,6 +1,4 @@
 using CapaLogica.Gestion;
-using FerreteriaMovil.Models;
-using FerreteriaMovil.VistasInternas.Vistasclientes;
 using System.Collections.ObjectModel;
 
 namespace FerreteriaMovil.VistasInternas;
@@ -8,20 +6,10 @@ namespace FerreteriaMovil.VistasInternas;
 public partial class VistaMenuClientes : ContentPage
 {
     
-        public ObservableCollection<CapaEntidades.Gestion.Producto> Productos { get; set; }
     public VistaMenuClientes()
     {
         InitializeComponent();
-
-        //var productos = new List<Producto>
-        //{
-        //    new Producto { Imagen = "martillo.png", Nombre = "Martillo", Descripcion = "Martillo de acero", Precio = "$10.00" },
-        //    new Producto { Imagen = "taladro.png", Nombre = "Taladro", Descripcion = "Taladro eléctrico", Precio = "$50.00" },
-        //    new Producto { Imagen = "https://bpecuador.com/wp-content/uploads/2024/03/palan-puntona-mango-plastico-1.png", Nombre = "Pala", Descripcion = "Palitas", Precio = "$00.00" },
-        //    // Añade más productos aquí
-        //};
-
-        ProductosCollectionView.ItemsSource = ProductoLN.filtrarVistaProductosLN("");
+        ProductosCollectionView.ItemsSource = ProductoLN.listarVistaProductosLN();
     }
 
 
