@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-using EntidadCliente = CapaEntidades.Gestion.Cliente;
+using EntidadCliente = cliente;
 
 namespace CapaDatos.Gestion
 {

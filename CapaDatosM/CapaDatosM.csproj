@@ -22,4 +22,8 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\CapaEntidadesM\CapaEntidadesM.csproj" />
+	</ItemGroup>
+
 </Project>
