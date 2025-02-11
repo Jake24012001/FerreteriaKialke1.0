@@ -1,12 +1,14 @@
 using CapaLogica.Gestion;
 using FerreteriaMovil.Models;
 using FerreteriaMovil.VistasInternas.Vistasclientes;
+using System.Collections.ObjectModel;
 
 namespace FerreteriaMovil.VistasInternas;
 
 public partial class VistaMenuClientes : ContentPage
 {
-    
+    {
+        public ObservableCollection<CapaEntidades.Gestion.Producto> Productos { get; set; }
     public VistaMenuClientes()
     {
         InitializeComponent();
@@ -22,16 +24,6 @@ public partial class VistaMenuClientes : ContentPage
         ProductosCollectionView.ItemsSource = ProductoLN.filtrarVistaProductosLN("");
     }
 
-
-    //public class Producto
-    //{
-    //    public string Imagen { get; set; }
-    //    public string Nombre { get; set; }
-    //    public string Descripcion { get; set; }
-    //    public string Precio { get; set; }
-
-
-    //}
 
     private async  void AgregarCarritoButton(object sender, EventArgs e)
     {

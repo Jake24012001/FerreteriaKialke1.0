@@ -12,11 +12,11 @@
                         <Frame BackgroundColor="White" BorderColor="LightGray" CornerRadius="10" Padding="4" Margin="10">
                             <VerticalStackLayout Spacing="5">
                                 <Label
-                            Text="PRODUTO DISPONIBLE"
-                            FontSize="Subtitle"
-                            FontAttributes="Bold"
-                            TextColor="Black"
-                            HorizontalOptions="Center"/>
+                        Text="PRODUCTO DISPONIBLE"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        HorizontalOptions="Center"/>
                                 <Image Source="{Binding Icono}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="Center"/>
                                 <Label Text="{Binding Producto}" FontSize="Subtitle" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
                                 <Label Text="{Binding Descripcion}" TextColor="Black" HorizontalOptions="Center"/>
