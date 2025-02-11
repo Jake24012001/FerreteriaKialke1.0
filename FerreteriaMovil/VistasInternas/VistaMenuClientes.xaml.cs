@@ -1,6 +1,4 @@
 using CapaLogica.Gestion;
-using FerreteriaMovil.Models;
-using FerreteriaMovil.VistasInternas.Vistasclientes;
 using System.Collections.ObjectModel;
 
 namespace FerreteriaMovil.VistasInternas;
