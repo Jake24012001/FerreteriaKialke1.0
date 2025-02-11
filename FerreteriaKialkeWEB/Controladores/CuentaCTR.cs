@@ -34,5 +34,28 @@ namespace FerreteriaKialkeWEB.Controladores
         }
 
 
+        [HttpGet]
+        [Route("Obtener")]
+        public IActionResult Obtener(int idCuenta)
+        {
+            Cuenta oCuenta = context.Cuenta.Find(idCuenta);
+            if (oCuenta == null)
+            {
+                return BadRequest("Cuenta no encontrado");
+            }
+            try
+            {
+                oCuenta = context.Cuenta.Where(p => p.IdCuenta == idCuenta).FirstOrDefault();
+
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Cuenta", respuesta = oCuenta });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message, respuesta = oCuenta });
+            }
+        }
+
+
     }
 }
