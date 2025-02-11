@@ -99,5 +99,29 @@ namespace FerreteriaKialkeWEB.Controladores
             }
         }
 
+
+        [HttpDelete]
+        [Route("Eliminar")]
+        public IActionResult Eliminar(int idRol)
+        {
+            Rol oRol = context.Rols.Find(idRol);
+            if (oRol == null)
+            {
+                return BadRequest("Rol no encontrado");
+            }
+            try
+            {
+
+                context.Rols.Remove(oRol);
+                context.SaveChanges();
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "rol" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = ex.Message });
+            }
+        }
+
     }
 }
