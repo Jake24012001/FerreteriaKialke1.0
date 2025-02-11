@@ -119,11 +119,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Datos\" />
-	  <Folder Include="Logica\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj" />
 	  <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
 	</ItemGroup>
