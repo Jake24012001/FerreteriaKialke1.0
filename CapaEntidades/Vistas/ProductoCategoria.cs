@@ -24,14 +24,14 @@ namespace CapaEntidades.Vistas
 
         public ProductoCategoria(int id, string categoria, string producto, decimal precio, int stock, string estado, string icono, string descripcion)
         {
-            this.id = id;
-            this.categoria = categoria;
-            this.producto = producto;
-            this.precio = precio;
-            this.stock = stock;
-            this.estado = estado;
-            this.icono = icono;
-            this.descripcion = descripcion;
+            Id = id;
+            Categoria = categoria;
+            Producto = producto;
+            Precio = precio;
+            Stock = stock;
+            Estado = estado;
+            Estado = icono;
+            Descripcion = descripcion;
         }
 
         public int Id { get => id; set => id = value; }
